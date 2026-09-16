@@ -10,3 +10,39 @@ export type StoryCard = {
   };
   items: StoryItem[];
 };
+
+export type Workouts = Workout[];
+
+export type Workout = {
+  id: string;
+  title: string;
+  description: string;
+  category: "strength" | "cardio" | "flexibility" | "calisthenics";
+  exercises: Exercise[];
+};
+
+export type Exercise = {
+  id: string;
+  order: number;
+  title: string;
+  description: string;
+  imageUrl: string;
+  videoUrl: string;
+  benefits: string[];
+  protocol: Protocols;
+  tips: Tips;
+};
+
+export type Protocols = {
+  beginner: string;
+  intermediate: string;
+  advanced: string;
+};
+
+export type Tips = {
+  beginner: string[];
+  intermediate: string[];
+  advanced: string[];
+};
+
+export type Level = "beginner" | "intermediate" | "advanced";
